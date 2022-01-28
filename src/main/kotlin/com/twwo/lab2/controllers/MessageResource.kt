@@ -12,5 +12,8 @@ class MessageResource(val messageService: MessageService) {
     @GetMapping
     fun index(): List<Message> = messageService.getAllMessages()
     @PostMapping
-    fun post(@RequestBody message: Message) { messageService.saveMessage(message) }
+    fun post(@RequestBody message: Message) { 
+        println("Having fun!")
+        messageService.saveMessage(message) 
+    }
 }
